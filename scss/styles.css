@@ -444,15 +444,60 @@ html, body {
   margin-top: 13px; }
 
 footer {
-  text-align: center;
-  color: white;
+  color: lightgrey;
   background-color: #2E2261;
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: lighter;
-  height: 10vh;
-  margin-top: 20px; }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  padding-left: 2%;
+  padding-right: 2%; }
+  footer a {
+    font-size: .75rem;
+    padding-bottom: 2%;
+    margin-top: 0; }
+  footer a:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+  footer p {
+    font-size: .75rem;
+    margin-top: 0; }
 
+#footerAbout {
+  grid-column: 1;
+  grid-row: 1; }
+
+#footerLinks {
+  grid-column: 1;
+  grid-row: 2; }
+
+#footerTag {
+  text-align: center;
+  grid-row: 3;
+  padding-top: 3vh; }
+  #footerTag p {
+    border-top: 1px solid lightgray; }
+
+@media only screen and (min-width: 30rem) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr; }
+
+  #footerAbout {
+    grid-column: 1;
+    padding-right: 4%; }
+
+  #footerLinks {
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 4%; }
+
+  #footerTag {
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 2; } }
 /* end of media query */
 @media only screen and (min-width: 60rem) {
   /* Add a black background color to the top navigation */
@@ -511,152 +556,50 @@ footer {
     padding-top: 18px; } }
 /* end of media query */
 
+/*# sourceMappingURL=styles.css.map */
 
+#wrapper {
+  background-image: url("../assets/text_bg.jpg");
+  background-attachment: fixed;
+}
 
-/*///////////////////////////*/
-
-
-
-/* Carousel/Hope Page Styling */
-
-#button-wrapper {
+.decade-container {
   display: flex;
-  justify-content: space-around;
-  width: 500px;
-  height: 200px;
-  padding-top: 20px;
-  margin: auto;
-  z-index: -1;
+  flex-wrap: wrap;
+  padding: 3% 6% 3% 6%;
+  margin: 0%;
+  background-color: rgba(255, 255, 255, 0.342);
+  height: 100%;
+}
+.decade-container img {
+  max-height: 320px;
+  width: 180px;
+  margin: 0px 7px 20px 7px;
+  margin-bottom: -60px;
+}
+#short-span {
+  margin-bottom: -55px;
+}
+.image {
   text-align: center;
 }
-#button-wrapper p {
-  margin-left: -9px;
-  margin-right: -9px;
-  margin-top: 100px;
-  z-index: 1000;
+.image span {
+  padding: 10px 54px 11px 55px;
+  background-color: rgba(0, 100, 0, 0.788);
+  font-family: Arial, Helvetica, sans-serif;
 }
-#search-button {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(192, 192, 192, 0.432);
+.image a {
+  text-decoration: none;
+  color: white;
 }
-#download-button {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(192, 192, 192, 0.432);
+.image a:hover {
+  color: rgb(235, 235, 235);
 }
-#search-button:hover {
-  background-color: rgba(192, 192, 192, 0.616);
-}
-#download-button:hover {
-  background-color: rgba(192, 192, 192, 0.616);
-}
-
-* {box-sizing:border-box}
-
-.carouselImg {
-  max-height: 400px;
-}
-@media only screen and (max-width: 700px) {
-  .carouselImg {
-    max-height: 300px;
-  }
-}
-
-
-/* Slideshow container */
-.slideshow-container {
-max-width: 800px;
-position: relative;
-margin: auto;
-margin-top: 3%;
-z-index: -1;
-}
-
-/* Hide the images by default */
-.mySlides {
-display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-width: auto;
-margin-top: -22px;
-padding: 16px;
-color: white;
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-right: 0;
-border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-color: #f2f2f2;
-font-size: 24px;
-padding: 8px 12px;
-position: absolute;
-bottom: 8px;
-width: 100%;
-text-align: center;
-background-color: rgba(114, 114, 114, 0.411);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-color: #f2f2f2;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-cursor: pointer;
-height: 15px;
-width: 15px;
-margin: 0 2px;
-background-color: #bbb;
-border-radius: 50%;
-display: inline-block;
-transition: background-color 0.6s ease;
-z-index: -1;
-}
-
-.active, .dot:hover {
-background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
--webkit-animation-name: fade;
--webkit-animation-duration: 1.5s;
-animation-name: fade;
-animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
-}
-
-@keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+#home-title {
+  background-color: rgba(255, 255, 255, 0.342);
+  margin: 0;
+  color: white;
+  text-shadow: 0px 2px 6px black;
+  text-align: center;
+  padding: 30px 0px 0px 0px;
 }

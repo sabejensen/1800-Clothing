@@ -1,0 +1,21 @@
+footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  
+  #footerAbout {
+    grid-column: 1;
+    padding-right: 4%;
+}
+  
+  #footerLinks {
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 4%;
+}
+
+  #footerTag {
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 2;
+  }

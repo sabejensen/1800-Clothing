@@ -168,12 +168,48 @@ html, body {
 
 
 footer {
-  text-align: center;
-  color: white;
+  color: lightgrey;
   background-color: #2E2261;
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: lighter;
-  height: 10vh; 
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  a  {
+    font-size: .75rem;
+    padding-bottom: 2%;
+    margin-top: 0;
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  p {
+    font-size: .75rem;
+    margin-top: 0;
+  }
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#footerAbout {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#footerLinks {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#footerTag {
+  text-align: center;
+  grid-row: 3;
+  padding-top: 3vh;
+  p {
+    border-top: 1px solid lightgray;
+    
+  }
 }
